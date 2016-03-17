@@ -8,3 +8,8 @@ My Python Review Notes ^_^</br>
 嘿嘿嘿。
 
 欲知效果如何，请戳[threadlocal类特性小测试](https://github.com/wanzifa/Review_Python/blob/master/threadlocal%E7%B1%BB%E7%9A%84%E7%89%B9%E6%80%A7.py)
+
+----------03.17更新--------------
+>添加了分布式进程的处理，基础知识都在注释上啦，欢迎pr！！！^_^
+分布式进程很厉害的，有时候我们一台电脑解决不完的问题，就让大家一起来解决！
+
