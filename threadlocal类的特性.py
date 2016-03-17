@@ -22,13 +22,14 @@ def process_student(name):
 def test1():
     print '线程1输出的学生姓名为'+local_data.name
 
-t1=threading.Thread(target=process_student, args=('xiaoming',))
-t1.start()
-t1.join()
-t2=TestThread()
-t2.start()
-t2.join()
-print '全局Threadlocal对象的字典内容为：'+str(local_data.__dict__)
+if __name__ == '__main__':
+    t1 = threading.Thread(target=process_student, args=('xiaoming',))
+    t1.start()
+    t1.join()
+    t2=TestThread()
+    t2.start()
+    t2.join()
+    print '全局Threadlocal对象的字典内容为：'+str(local_data.__dict__)
 
 
 
