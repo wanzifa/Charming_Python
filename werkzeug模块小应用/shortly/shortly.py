@@ -37,6 +37,7 @@ class Shortly(object):
         return Response(t.render(context), mimetype='text/html')
 
     def dispatch_request(self, request):
+        #创建一个适配器，在下面用来匹配请求
         adapter = self.url_map.bind_to_environ(request.environ)
         try:
             #返回函数的端点名，以及函数所需的参数字典
@@ -65,6 +66,7 @@ class Shortly(object):
         short_id = self.redis.get('reverse-url:' + url)
         if short_id is not None:
             return short_id
+        #如果参数不存在，创建该参数并使它初始值为1
         url_num = self.redis.incr('last-url-id')
         short_id = base36_encode(url_num)
         self.redis.set('url-target:' + short_id, url)
@@ -102,6 +104,7 @@ class Shortly(object):
         )
         
 def base36_encode(number):
+    #short_id的产生过程
     assert number >= 0, 'positive integer required'
     if number == 0:
         return '0'
