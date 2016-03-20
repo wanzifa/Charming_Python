@@ -35,7 +35,7 @@ class MyThread(threading.Thread):
             mutex.release()
 
 num = 0
-#创建一个全局锁实例
+#创建一个全局的线程锁实例
 mutex = threading.Lock()
 
 def test():
