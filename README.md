@@ -25,9 +25,8 @@ My Python Review Notes ^_^</br>
 >werkzeug注释已更完～～欢迎pr！！！
 
 ----------03.20更新--------------
->更新threading模块的Lock对象
-"""
-介绍python中threading模块的Lock()对象
+>更新threading模块的Lock对象</br>
+介绍python中threading模块的Lock()对象</br>
 Lock对象干啥使的？</br>
 顾名思义，它就是锁的意思</br>
 为什么要锁？</br>
@@ -41,4 +40,3 @@ Lock对象干啥使的？</br>
 那么如果我希望，虽然这个进程里有不同的线程，但要让它们顺序执行</br>
 这时候,拿Lock(线程锁)出来说事就很重要了</br>
 在全局中定义一个Lock对象，可以实现线程的顺序运行，也就是同步.</br>
-"""
