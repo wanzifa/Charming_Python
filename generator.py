@@ -27,10 +27,11 @@ print "生成器的执行过程，输入simple_g.next()后返回：{0}".format(s
 
 """
 生成器与外界的数据交流
+就是在开始运行后能够为生成器提供新的值
 """
 def test(n):
     while True:
-        n = yield n
+        n = (yield n)
 # 在第一次yield执行完毕后 n变成空了
 # 此时如果继续调用yield 什么也不返回
 # 通过send()方法可以向n赋值 然后yield会继续执行 返回相应的值
