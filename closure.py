@@ -12,6 +12,7 @@ def counter(start_at=0):
     count = [start_at]
     b = 1
     def incr():
+        x=b
         count[0] += 1
         return count[0]
     return incr
