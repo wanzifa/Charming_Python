@@ -8,7 +8,9 @@
 """
 def counter(start_at=0):
     count = [start_at]
+    b=1
     def incr():
+        x=b
         count[0] += 1
         return count[0]
     return incr
@@ -17,4 +19,7 @@ a=counter(1)
 print a()
 b=counter(100)
 print b()
-
+print a.__closure__
+print a.__closure__[0]
+print a.__closure__[0].cell_contents
+print a.__closure__[1].cell_contents
