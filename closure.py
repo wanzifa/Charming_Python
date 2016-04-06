@@ -7,10 +7,11 @@
 那么这个内部函数连带外部作用域一起，就叫做闭包。
 """
 def counter(start_at=0):
+    # 注意只有可变类型（容器）才可以被闭包函数改变它内部的值
+    # 而不可变类型（比如b）则不可以
     count = [start_at]
-    b=1
+    b = 1
     def incr():
-        x=b
         count[0] += 1
         return count[0]
     return incr
